@@ -43,20 +43,6 @@
 	                                </span>
 	                            @endif
 	                        </div>
-							<div class="form-group">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="allow_votes" value="1"{{ $video->votesAllowed() ? ' checked' : '' }}> Allow Votes
-									</label>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="allow_comments" value="1"{{ $video->commentsAllowed() ? ' checked' : '' }}> Allow Comments
-									</label>
-								</div>
-							</div>
 							{{ csrf_field() }}
 							{{ method_field('PUT') }}
 							<button type="submit" class="btn btn-primary">Update</button>
