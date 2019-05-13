@@ -3,7 +3,7 @@
 	    <div class="row">
 	        <div class="col-md-8 col-md-offset-2">
 	            <div class="panel panel-default">
-	                <div class="panel-heading">Upload</div>
+	                <div class="panel-heading">Upload Video</div>
 
 	                <div class="panel-body">
 	                    <input type="file" name="video" id="video" class="form-control" @change="fileInputChange" v-if="!uploading">
@@ -12,7 +12,7 @@
 
 						<div id="video-form" v-if="uploading && !failed">
 							<div class="alert alert-info" v-if="!uploadingComplete">
-								Your video will be available at <a v-bind:href="$root.baseUrl+'videos/'+uuid">{{ $root.baseUrl + 'videos/' + uuid }}</a>
+								Your video will be available at <a v-bind:href="$root.baseUrl+'/videos/'+uuid">{{ $root.baseUrl + '/videos/' + uuid }}</a>
 							</div>
 							<div class="alert alert-success" v-if="uploadingComplete">
 								Upload complete! Video is now processing. <a v-bind:href="$root.baseUrl+'videos'">Go to your videos</a>
@@ -36,21 +36,6 @@
 									<option value="unlisted">Unlisted</option>
 								</select>
 							</div>
-							<div class="form-group">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" v-model="allow_votes" value="yes" aria-label="Votes"> Allow Votes
-									</label>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" v-model="allow_comments" value="yes" aria-label="Comments"> Allow Comments
-									</label>
-								</div>
-							</div>
-							<span class="help-block pull-right">{{ saveStatus }}</span>
 							<button type="submit" class="btn btn-default" @click.prevent="update">Save Changes</button>
 						</div>
 	                </div>

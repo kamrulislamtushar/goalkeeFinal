@@ -58,20 +58,11 @@
 		            </div>
 				@endif
 
-					<div class="panel-heading">
-						<div class="row form-group">
-							<div class="col-8 col-md-8">
-								<input disabled type="text" value="{{url()->current()}}" id="myInput" class="form-control">
-							</div>
-							<div class="col-4">
-								<button class="btn btn-primary" onclick="myFunction()">Copy URL</button>
-							</div>
-						</div>
-					</div>
-					<div class="row post-share ">
+
+					<div class="row post-share col-md-offset-2 ">
 						<div class="col-2 col-lg-3 ">
 							<div class="title">
-								<h3>Share On:</h3>
+								<h3 class="card-header">Share On:</h3>
 							</div>
 						</div>
 						<div class="col-4 col-lg-6">
@@ -94,7 +85,9 @@
 	    </div>
 	</div>
 @endsection
+@section('js')
 
+	@endsection
 @section('css')
 	<style>
 		.post-share .socials img {

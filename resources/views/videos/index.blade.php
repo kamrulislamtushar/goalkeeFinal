@@ -46,10 +46,11 @@
 									</div>
 								</div>
 							</div>
-							{{ $videos->links() }}
+
 						@empty
 							<p>You have no videos.</p>
 						@endforelse
+							{{ $videos->links() }}
 	                </div>
 	            </div>
 	        </div>

@@ -79,17 +79,16 @@
 
         @yield('content')
     </div>
-    <script>
+ <script>
         function myFunction() {
-            /* Get the text field */
             var copyText = document.getElementById("myInput");
             copyText.select();
             document.execCommand("copy");
-            alert("Video URL Copied to clipboard: " + copyText.value);
         }
+
     </script>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cd97b7c4e8b322a"></script>
+    <script src="{{ asset('js/addthis.js') }}"></script>
 </body>
 </html>
