@@ -14,7 +14,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <style>
+
+        .post-share  img {
+            max-height: 50px!important;
+        }
         .tooltip {
             position: relative;
             display: inline-block;
@@ -85,5 +90,6 @@
     </script>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cd97b7c4e8b322a"></script>
 </body>
 </html>

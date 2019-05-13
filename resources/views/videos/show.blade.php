@@ -61,15 +61,44 @@
 					<div class="panel-heading">
 						<div class="row form-group">
 							<div class="col-8 col-md-8">
-								<input disabled type="text" value="{{ $video->getStreamUrl($video->enc_video_filename) }}" id="myInput" class="form-control">
+								<input disabled type="text" value="{{url()->current()}}" id="myInput" class="form-control">
 							</div>
 							<div class="col-4">
 								<button class="btn btn-primary" onclick="myFunction()">Copy URL</button>
 							</div>
 						</div>
 					</div>
+					<div class="row post-share ">
+						<div class="col-2 col-lg-3 col-lg-offset-3">
+							<div class="title">
+								<h3>Share On:</h3>
+							</div>
+						</div>
+						<div class="col-4 col-lg-8">
+							<div class="col-3 col-lg-3">
+								<a href="http://www.facebook.com/sharer.php?u={{url()->current()}}" target="_blank" rel="nofollow"><img src="{{ asset('images/facebook.png') }}" class="socials"></a>
+							</div>
+							<div class="col-3 col-lg-3">
+								<a href="https://plus.google.com/share?url={{url()->current()}}" target="_blank" rel="nofollow"><img src="{{ asset('images/google.png') }}" class="socials"></a>
+							</div>
+							<div class="col-3 col-lg-3">
+								<a href="http://twitter.com/share?text={{ $video->title }}&url={{url()->current()}}" target="_blank" rel="nofollow"><img src="{{ asset('images/twitter.png') }}" class="socials"></a>
+							</div>
+							<div class="col-3 col-lg-3">
+								<a href="http://www.reddit.com/submit?url={{url()->current()}}" target="_blank" rel="nofollow"><img src="{{ asset('images/reddit.png') }}" class="socials"></a>
+							</div>
+						</div>
 
-			 </div>
+					</div>
+			</div>
 	    </div>
 	</div>
+@endsection
+
+@section('css')
+	<style>
+		.post-share .socials img {
+			max-height: 50px!important;
+		}
+	</style>
 @endsection

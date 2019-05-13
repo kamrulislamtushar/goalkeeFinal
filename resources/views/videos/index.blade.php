@@ -16,7 +16,7 @@
 								<div class="row">
 									<div class="col-sm-3">
 										<a href="{{ url('videos/'.$video->uuid) }}">
-											<img src="{{ $video->getThumbnail($video->enc_video_filename) }}" alt="" class="img-responsive">
+											<img src="{{ $video->getThumbnail($video->enc_video_filename) }}" alt="{{ $video->title }}" class="img-responsive">
 										</a>
 									</div>
 									<div class="col-sm-9">
