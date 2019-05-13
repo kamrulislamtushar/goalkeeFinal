@@ -69,12 +69,12 @@
 						</div>
 					</div>
 					<div class="row post-share ">
-						<div class="col-2 col-lg-3 col-lg-offset-3">
+						<div class="col-2 col-lg-3 ">
 							<div class="title">
 								<h3>Share On:</h3>
 							</div>
 						</div>
-						<div class="col-4 col-lg-8">
+						<div class="col-4 col-lg-6">
 							<div class="col-3 col-lg-3">
 								<a href="http://www.facebook.com/sharer.php?u={{url()->current()}}" target="_blank" rel="nofollow"><img src="{{ asset('images/facebook.png') }}" class="socials"></a>
 							</div>
