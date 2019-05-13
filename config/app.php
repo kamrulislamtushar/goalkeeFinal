@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'CodeTube',
+    'name' => 'GoalKee',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'Africa/Lagos',
+    'timezone' => 'Asia/Calcutta',
 
     /*
     |--------------------------------------------------------------------------
